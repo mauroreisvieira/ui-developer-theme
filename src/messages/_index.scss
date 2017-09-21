@@ -14,7 +14,7 @@
     overflow: hidden;
     align-items: center;
 
-    &.message__item--reverse {
+    &--reverse {
       flex-direction: row-reverse;
     }
 

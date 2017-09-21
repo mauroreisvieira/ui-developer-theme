@@ -26,8 +26,8 @@
       outline: none;
     }
 
-    &.pagination__item--first,
-    &.pagination__item--last {
+    &--first,
+    &--last {
       color: $salmon;
 
       @include mobile () {
@@ -40,8 +40,8 @@
       }
     }
 
-    &.pagination__item--prev,
-    &.pagination__item--next {
+    &--prev,
+    &--next {
       color: $violet;
 
       &:hover {
@@ -50,7 +50,7 @@
       }
     }
 
-    .pagination__item--dots {
+    &--dots {
 
       &:hover {
         background: $white;
@@ -58,8 +58,8 @@
       }
     }
 
-    &.pagination__item--active {
-      background: $color-default;
+    &--active {
+      background: $salmon;
       color: $white;
     }
 

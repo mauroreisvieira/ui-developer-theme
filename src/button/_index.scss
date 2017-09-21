@@ -18,7 +18,7 @@
   vertical-align: middle;
   z-index: 0;
 
-  &.button--large {
+  &--large {
     height: 44px;
     line-height: 44px;
     width: 120px;
@@ -26,7 +26,7 @@
 
   @each $key, $values in $buttons {
 
-    &.button--#{$key} {
+    &--#{$key} {
       background-color: nth($values, 1);
       color: nth($values, 2);
       overflow: hidden;

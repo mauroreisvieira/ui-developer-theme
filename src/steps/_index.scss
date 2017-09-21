@@ -18,7 +18,6 @@
   justify-content: center;
   position: relative;
 
-
   &:not(:last-child) {
     &:before,
     &:after {
@@ -43,7 +42,7 @@
     background-color: $pink;
   }
 
-  &--complete {
+  .step--complete {
     &:after {
       width: 100% !important;
       opacity: 1;

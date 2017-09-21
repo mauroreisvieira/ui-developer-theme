@@ -1,13 +1,13 @@
 .navigation {
+  align-items: center;
   display: flex;
   height: 72px;
-  align-items: center;
   justify-content: flex-end;
 
-  &.navigation--right {
+  &--right {
     justify-content: flex-end;
 
-    @include mobile() {
+    @include tablet() {
       justify-content: center;
     }
   }
@@ -18,11 +18,42 @@
     cursor: pointer;
     margin: 0;
     padding: 12px 20px;
+    position: relative;
     text-decoration: none;
     transition: color .2s linear;
+    text-transform: uppercase;
+
+    &--active {
+      color: $blue;
+
+      &:after {
+        transform-origin: top left;
+        transform: scale(1);
+      }
+    }
+
+    &:after {
+      background: currentColor;
+      content: "";
+      height: 1px;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      transform-origin: top right;
+      transform: scale(0, 1);
+      transition: transform .6s cubic-bezier(.19, 1, .22, 1);
+      width: calc(100% - 20px);
+    }
 
     &:hover {
-      color: $color-default;
+      color: $blue;
+
+      &:after {
+        transform-origin: top left;
+        transform: scale(1);
+      }
     }
   }
 }

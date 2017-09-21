@@ -1,16 +1,16 @@
-$yellow    : #ffc107;
-$aqua      : #6dcdb8;
-$pink      : #e91e63;
-$red      : #e91e63;
-$salmon    : #fa7468;
-$blue      : #4981fd;
-$violet    : #40386f;
-$white     : #fff;
-$black     : #000;
+$yellow     : #ffc107;
+$aqua       : #6dcdb8;
+$pink       : #e91e63;
+$red        : #e91e63;
+$salmon     : #fa7468;
+$blue       : #4981fd;
+$violet     : #40386f;
+$white      : #fff;
+$black      : #000;
 $grey       : #9e9e9e;
-$dark-grey : #4a4a4a;
+$dark-grey  : #4a4a4a;
 $light-grey : #f4f4f4;
-$gray-100  : #fafafa;
+$gray-100   : #fafafa;
 
 $color-title      : $aqua;
 $color-text       : $dark-grey;
@@ -65,7 +65,6 @@ $breakpoints: (
 $buttons: (
   'base' : ($blue, $white, $violet, $white),
   'default' : ($salmon, $white, $violet, $white),
-  'search' : ($aqua, $white, $yellow, $black),
   'link' : (transparent, $black, rgba($black, .1), $black),
-  );
+);
 

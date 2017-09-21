@@ -55,7 +55,7 @@
     height: 100%;
     width: 100%;
     fill: transparent;
-    stroke: $violet;
+    stroke: $blue;
     pointer-events: none;
     z-index: 1;
 
@@ -70,14 +70,8 @@
 
   &:hover {
 
-    .card__thumb {
-
-      .card__thumbImage {
-        transform: scale(1.2, 1.2);
-      }
-    }
-
     svg {
+
       rect {
         stroke-dasharray: 3000;
       }

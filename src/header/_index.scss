@@ -4,7 +4,7 @@
   .header__brand {
     max-width: 176px;
 
-    @include mobile() {
+    @include tablet() {
       margin: 20px auto;
     }
 
