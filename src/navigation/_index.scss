@@ -1,0 +1,24 @@
+.navigation {
+  display: flex;
+  height: 72px;
+  align-items: center;
+  justify-content: flex-end;
+
+  &.navigation--right {
+    justify-content: flex-end;
+  }
+
+  .navigation__link {
+    @include typography();
+    color: $black;
+    cursor: pointer;
+    margin: 0;
+    padding: 12px 20px;
+    text-decoration: none;
+    transition: color .2s linear;
+
+    &:hover {
+      color: $color-default;
+    }
+  }
+}

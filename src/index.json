@@ -1,0 +1,10 @@
+{
+    "header" : "./src/header/index.html",
+    "navigation" : "./src/navigation/index.html",
+    "form" : "./src/form/index.html",
+    "card" : "./src/card/index.html",
+    "button" : "./src/button/index.html",
+    "messages" : "./src/messages/index.html",
+    "pagination" : "./src/pagination/index.html",
+    "steps" : "./src/steps/index.html"
+}

@@ -1,0 +1,15 @@
+.typography--xlg {
+  @include typography($font-x-lg, $font-thin);
+}
+
+.typography--headline {
+
+  &:after {
+    background-color: $aqua;
+    content: '';
+    display: block;
+    height: 2px;
+    margin: 15px 0;
+    width: 50px;
+  }
+}

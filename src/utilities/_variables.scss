@@ -1,0 +1,68 @@
+$yellow    : #ffc107;
+$aqua      : #6dcdb8;
+$pink      : #e91e63;
+$salmon    : #fc697b;
+$blue      : #4981FD;
+$violet    : #40386f;
+$white     : #fff;
+$black     : #000;
+$grey       : #9e9e9e;
+$dark-grey : #4a4a4a;
+$light-grey : #dfe3eb;
+$gray-100  : #fafafa;
+
+$color-title      : $aqua;
+$color-text       : $dark-grey;
+$color-navigation : $dark-grey;
+$disabled : lighten($dark-grey, 60%);
+
+$color-default: $aqua;
+
+// OTHER
+$border-radius    : 2px;
+$card-padding     : 20px;
+$pagination-ratio : 40px;
+
+// FONT SIZE
+$font-xs          : 12px;
+$font-sm          : 14px;
+$font-md          : 16px;
+$font-lg          : 28px;
+$font-x-lg        : 36px;
+$font-xx-lg       : 42px;
+
+// FONT FAMILY
+$font-family      : 'Roboto', sans-serif;
+
+// FONT WEIGHT
+$font-thin       : 300;
+$font-light      : 400;
+$font-normal     : 500;
+$font-bold       : 700;
+$font-extra-bold : 900;
+
+// GRID
+$grid: 1130px;
+$columns: 12;
+$gutter: 15px;
+
+$class-row: 'row';
+$class-cell: 'col';
+$class-off: 'off';
+
+$mobile : 280px;
+$tablet : 992px;
+$desktop : 1200px;
+
+$breakpoints: (
+  (small, $mobile),
+  (medium, $tablet),
+  (large, $desktop)
+);
+
+$buttons: (
+  'default' : ($salmon, $white, $violet, $white),
+  'search' : ($aqua, $white, $yellow, $black),
+  'link' : (transparent, $black, rgba($black, .1), $black),
+);
+

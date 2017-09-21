@@ -1,0 +1,61 @@
+.button {
+  @include typography($font-sm, $font-light);
+  background: none;
+  border: 0;
+  border-radius: $border-radius;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  margin: 0 4px;
+  float: left;
+  height: 34px;
+  letter-spacing: .4px;
+  line-height: 34px;
+  padding: 0 16px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all .3s ease;
+  vertical-align: middle;
+  z-index: 0;
+
+  &.button--large {
+    height: 44px;
+    line-height: 44px;
+    min-width: 120px;
+  }
+
+  @each $key, $values in $buttons {
+
+    &.button--#{$key} {
+      background-color: nth($values, 1);
+      color: nth($values, 2);
+      overflow: hidden;
+      transition: border-color 0.3s, color 0.3s;
+
+      &:before {
+        background-color: nth($values, 3);
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform-origin: 0% 100%;
+        transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+        transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+        width: 150%;
+        z-index: -1;
+      }
+
+      &:hover {
+        color: nth($values, 4);
+
+        &:before {
+          background-color: nth($values, 3);
+          opacity: 1;
+          transform: rotate3d(0, 0, 1, 0deg);
+          transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+        }
+      }
+    }
+  }
+}

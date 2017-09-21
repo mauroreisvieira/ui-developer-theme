@@ -1,0 +1,97 @@
+.message {
+  display: block;
+  padding: 0;
+  list-style: none;
+
+  .message__item {
+    box-sizing: border-box;
+    display: flex;
+    line-height: 1;
+    min-height: 48px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 20px 0;
+    overflow: hidden;
+    align-items: center;
+
+    &.message__item--reverse {
+      flex-direction: row-reverse;
+    }
+
+    .message__itemInfo {
+      justify-content: flex-start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-basis: 25%;
+      text-align: center;
+
+      .message__itemInfo-thumb {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .message__itemInfo-name {
+        @include typography($font-xs, $font-normal);
+        letter-spacing: .4px;
+        text-transform: uppercase;
+        margin: 12px 0;
+      }
+    }
+
+    .message__itemContent {
+      flex-basis: 100%;
+      padding: 14px;
+      background-color: #f6f6fa;
+      border-radius: 12px;
+
+      .message__itemContent-text {
+        @include typography($font-md, $font-thin);
+
+        a {
+          text-decoration: none;
+          color: $pink;
+        }
+      }
+    }
+  }
+}
+
+.message__itemInfo-rating {
+  margin: 0;
+  overflow: hidden;
+
+  .message__ratingLabel {
+    float: right;
+    color: $grey;
+    font-size: 22px;
+    transition: color .4s;
+    margin-right: 3px;
+
+    &:before {
+      display: none;
+    }
+
+    &:hover,
+    &:hover~label {
+      color: $yellow;
+      cursor: pointer
+    }
+  }
+
+  .message__itemInfo-ratingInput {
+    float: right;
+    opacity: 0;
+    position: absolute;
+    display: none;
+    visibility: hidden;
+
+    &:focus~label,
+    &:checked~label {
+      color: $yellow;
+      cursor: pointer
+    }
+  }
+}

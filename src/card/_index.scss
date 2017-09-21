@@ -1,0 +1,86 @@
+.card {
+  background: $white;
+  border-radius: $border-radius;
+  box-shadow: -10px 10px 50px 0 rgba($black, .1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0;
+  position: relative;
+  z-index: 1;
+
+  .card__thumb {
+    overflow: hidden;
+
+    .card__thumbImage {
+      width: 100%;
+      transform: none;
+      will-change: transform;
+      transition: transform .4s ease-in-out;
+    }
+  }
+
+  .card__title {
+    box-sizing: border-box;
+    padding: ($card-padding / 2) $card-padding;
+    width: 100%;
+
+    .card__titleText {
+      @include typography($font-md, $font-normal);
+      text-transform: uppercase;
+      margin-bottom: 0;
+      letter-spacing: .4px;
+    }
+  }
+
+  .card__content {
+    box-sizing: border-box;
+    padding: 0 $card-padding;
+    width: 100%;
+
+    .card__contentText {
+      @include typography($font-md, $font-thin);
+    }
+  }
+
+  .card__menu {
+    box-sizing: border-box;
+    padding: $card-padding;
+    width: 100%;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    fill: transparent;
+    stroke: $violet;
+    pointer-events: none;
+    z-index: 1;
+
+    rect {
+      stroke-dasharray: 0 3000;
+      stroke-width: 2px;
+      fill: transparent;
+      transition: stroke-dasharray .8s ease-in-out,
+      stroke-width .4s ease-in-out;
+    }
+  }
+
+  &:hover {
+
+    .card__thumb {
+
+      .card__thumbImage {
+        transform: scale(1.2, 1.2);
+      }
+    }
+
+    svg {
+      rect {
+        stroke-dasharray: 3000;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+
+  .header__brand {
+    max-width: 176px;
+
+    .header__brandImage {
+      position: relative;
+      top: 2px;
+      width: 100%;
+    }
+  }
+}

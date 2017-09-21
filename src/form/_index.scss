@@ -1,0 +1,164 @@
+.form {
+  display: flex;
+  width: 100%;
+  margin: 20px 0;
+
+  .form__fieldInput {
+
+    &.form__fieldInput--large {
+      border: 0;
+      height: 44px;
+      padding: 0 15px;
+      width: 100%;
+    }
+
+    &:focus {
+      background-color: $gray-100;
+      outline: none;
+    }
+  }
+
+  .form__fieldInputCheckbox {
+    position: absolute;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+    top: 2px;
+
+    + label.form__fieldInputCheckbox-label:before {
+      position: relative;
+      top: 0;
+      left: 2px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: .75em;
+      content: "";
+      transition: .5s ease all;
+      vertical-align: -.25em;
+      box-shadow: 0 0 0 2px $black;
+    }
+
+    &:checked + label.form__fieldInputCheckbox-label:before {
+      background: currentColor;
+      box-shadow: 0 0 0 2px currentColor;
+    }
+
+    &:checked + label.form__fieldInputCheckbox-label:after {
+      top: 2px;
+      left: 4px;
+      height: 7px;
+      width: 9px;
+      content: '';
+      cursor: pointer;
+      position: absolute;
+      z-index: 2;
+      border-left: 4px solid $white;
+      border-bottom: 8px solid $white;
+      border-top: 0;
+      border-right: 0;
+      transform: rotate(-45deg) scaleY(.5);
+    }
+
+    &:disabled + label.form__fieldInputCheckbox-label:before {
+      background-color: $disabled;
+    }
+
+    &:disabled + label.form__fieldInputCheckbox-label:after {
+      background-color: $disabled;
+    }
+
+    &:disabled + label.form__fieldInputCheckbox-label:before {
+      box-shadow: 0 0 0 2px $disabled;
+    }
+  }
+
+  .form__fieldInputCheckbox-label {
+    color: $salmon;
+    position: relative;
+
+    .form__fieldInputCheckbox-labelText {
+      color: $black;
+      position: relative;
+      top: 3px;
+      @include typography($font-xs, $font-normal);
+      text-transform: uppercase;
+    }
+  }
+
+  .form__fieldInputSwitch {
+    display: none;
+
+    + label.form__fieldInputSwitch-label {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      text-align: left;
+      padding-left: 50px;
+    }
+
+    + label.form__fieldInputSwitch-label:before,
+    + label.form__fieldInputSwitch-label:after {
+      content: "";
+      position: absolute;
+      margin: 0;
+      outline: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      transition: all 0.3s ease;
+    }
+
+    + label.form__fieldInputSwitch-label:before {
+      left: 2px;
+      width: 34px;
+      height: 14px;
+      background-color: $grey;
+      border-radius: 8px;
+    }
+
+    + label.form__fieldInputSwitch-label:after {
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      background-color: $gray-100;
+      border-radius: 50%;
+      box-shadow: 0 3px 1px -2px rgba($black, .14), 0 2px 2px 0 rgba($black, .098), 0 1px 5px 0 rgba($black, .084);
+    }
+
+    &:checked + label.form__fieldInputSwitch-label:after {
+      background-color: currentColor;
+      -webkit-transform: translate(80%, -50%);
+      transform: translate(80%, -50%);
+    }
+
+    &:checked + label.form__fieldInputSwitch-label:before {
+      background-color: currentColor;
+      opacity: .5;
+    }
+
+    .form__fieldInputSwitch:checked + label.form__fieldInputSwitch-label:after {
+      background-color: currentColor;
+      -webkit-transform: translate(80%, -50%);
+      transform: translate(80%, -50%);
+    }
+
+    &:disabled + label.form__fieldInputSwitch-label:before {
+      background-color: $disabled;
+    }
+
+    &:disabled + label.form__fieldInputSwitch-label:after {
+      background-color: $disabled;
+    }
+  }
+
+  .form__fieldInputSwitch-label {
+    color: $salmon;
+
+    .form__fieldInputSwitch-labelText {
+      color: $black;
+      @include typography($font-xs, $font-normal);
+      text-transform: uppercase;
+    }
+  }
+}
