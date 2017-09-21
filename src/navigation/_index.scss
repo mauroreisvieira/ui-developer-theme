@@ -6,6 +6,10 @@
 
   &.navigation--right {
     justify-content: flex-end;
+
+    @include mobile() {
+      justify-content: center;
+    }
   }
 
   .navigation__link {

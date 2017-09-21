@@ -1,5 +1,17 @@
-<form class="form form__field" action="">
-    <label class="form__fieldLabel hidde" for="search-field">Search</label>
-    <input class="form__fieldInput form__fieldInput--large" type="text" name="" placeholder="Search what you want..." id="search-field" />
-    <button class="button button--large button--search">Search</button>
-</form>
+<div class="card">
+    <div class="card__title">
+        <h2 class="card__titleText">Talk to me</h2>
+    </div>
+    <div class="card__content">
+        <form class="form form--vertical form__field" action="">
+            <label class="form__fieldLabel" for="fieldName">Name <span class="form__fieldLabel-required">*</span></label>
+            <input class="form__fieldInput form__fieldInput--large" type="text" name="" placeholder="Fill with your name" id="fieldName" />
+            <label class="form__fieldLabel" for="fieldPhone">Phone</label>
+            <input class="form__fieldInput form__fieldInput--large" type="text" name="" placeholder="Fill with your phone" id="fieldPhone" />
+            <label class="form__fieldLabel" for="fieldMessage">Message <span class="form__fieldLabel-required">*</span></label>
+            <textarea class="form__fieldInput form__fieldInput-textarea" rows="5" placeholder="Write something..."></textarea>
+            <button class="button button--large button--base">Send</button>
+            <button class="button button--large button--link">Reset</button>
+        </form>
+    </div>
+</div>

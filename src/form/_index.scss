@@ -1,19 +1,58 @@
 .form {
   display: flex;
-  width: 100%;
   margin: 20px 0;
+  width: 100%;
+
+  &--vertical {
+    display: block;
+    overflow: hidden;
+
+    .form__fieldInput {
+      margin: 10px 0;
+      @include typography($font-xs, $font-light);
+    }
+
+    .form__fieldLabel {
+      color: $grey;
+      @include typography($font-xs, $font-normal);
+      text-transform: uppercase;
+      margin-top: 10px;
+      letter-spacing: .4px;
+      display: block;
+
+      .form__fieldLabel-required {
+        color: $red;
+      }
+    }
+
+    .button {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
 
   .form__fieldInput {
+    box-sizing: border-box;
+    background-color: $light-grey;
+    border: 1px solid $light-grey;
+    height: 36px;
+    padding: 0 12px;
+    width: 100%;
 
-    &.form__fieldInput--large {
-      border: 0;
+    &.form__fieldInput-textarea {
+      resize: none;
+      height: auto;
+      padding: 20px 12px;
+    }
+
+    &--large {
       height: 44px;
       padding: 0 15px;
       width: 100%;
     }
 
     &:focus {
-      background-color: $gray-100;
+      background-color: $white;
       outline: none;
     }
   }

@@ -4,6 +4,10 @@
   .header__brand {
     max-width: 176px;
 
+    @include mobile() {
+      margin: 20px auto;
+    }
+
     .header__brandImage {
       position: relative;
       top: 2px;

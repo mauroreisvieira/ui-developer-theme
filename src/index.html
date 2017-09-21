@@ -12,7 +12,11 @@
     {{> header/index }}
     <section class="hero">
         <div class="search">
-            {{> form/index }}
+            <form class="form form__field" action="">
+                <label class="form__fieldLabel hidde" for="search-field">Search</label>
+                <input class="form__fieldInput form__fieldInput--large" type="text" name="" placeholder="Search what you want..." id="search-field" />
+                <button class="button button--large button--search">Search</button>
+            </form>
         </div>
         <img src="http://via.placeholder.com/1900x340" alt="Hero Banner" title="Hero Banner" class="hero__image">
     </section>
@@ -66,6 +70,9 @@
             <div class="row">
                 <div class="col-large-12 col-medium-12 col-small-12">
                     <h1 class="typography--xlg typography--headline">Modal / Login form</h1>
+                </div>
+                <div class="col-large-6 off-large-3 col-medium-8 off-medium-2 col-small-12">
+                    {{> form/index }}
                 </div>
             </div>
         </div>

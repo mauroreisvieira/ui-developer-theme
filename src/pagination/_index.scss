@@ -30,6 +30,10 @@
     &.pagination__item--last {
       color: $salmon;
 
+      @include mobile () {
+        display: none;
+      }
+
       &:hover {
         background: transparent;
         color: darken($salmon, 12%);

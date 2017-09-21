@@ -1,14 +1,15 @@
 $yellow    : #ffc107;
 $aqua      : #6dcdb8;
 $pink      : #e91e63;
-$salmon    : #fc697b;
-$blue      : #4981FD;
+$red      : #e91e63;
+$salmon    : #fa7468;
+$blue      : #4981fd;
 $violet    : #40386f;
 $white     : #fff;
 $black     : #000;
 $grey       : #9e9e9e;
 $dark-grey : #4a4a4a;
-$light-grey : #dfe3eb;
+$light-grey : #f4f4f4;
 $gray-100  : #fafafa;
 
 $color-title      : $aqua;
@@ -18,12 +19,12 @@ $disabled : lighten($dark-grey, 60%);
 
 $color-default: $aqua;
 
-// OTHER
+// other
 $border-radius    : 2px;
 $card-padding     : 20px;
 $pagination-ratio : 40px;
 
-// FONT SIZE
+// font size
 $font-xs          : 12px;
 $font-sm          : 14px;
 $font-md          : 16px;
@@ -31,17 +32,17 @@ $font-lg          : 28px;
 $font-x-lg        : 36px;
 $font-xx-lg       : 42px;
 
-// FONT FAMILY
-$font-family      : 'Roboto', sans-serif;
+// font family
+$font-family      : 'roboto', sans-serif;
 
-// FONT WEIGHT
+// font weight
 $font-thin       : 300;
 $font-light      : 400;
 $font-normal     : 500;
 $font-bold       : 700;
 $font-extra-bold : 900;
 
-// GRID
+// grid
 $grid: 1130px;
 $columns: 12;
 $gutter: 15px;
@@ -50,19 +51,21 @@ $class-row: 'row';
 $class-cell: 'col';
 $class-off: 'off';
 
-$mobile : 280px;
+$min-device : 280px;
+$mobile : 767px;
 $tablet : 992px;
 $desktop : 1200px;
 
 $breakpoints: (
-  (small, $mobile),
+  (small, $min-device),
   (medium, $tablet),
   (large, $desktop)
-);
+  );
 
 $buttons: (
+  'base' : ($blue, $white, $violet, $white),
   'default' : ($salmon, $white, $violet, $white),
   'search' : ($aqua, $white, $yellow, $black),
   'link' : (transparent, $black, rgba($black, .1), $black),
-);
+  );
 

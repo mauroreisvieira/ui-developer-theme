@@ -21,7 +21,7 @@
   &.button--large {
     height: 44px;
     line-height: 44px;
-    min-width: 120px;
+    width: 120px;
   }
 
   @each $key, $values in $buttons {

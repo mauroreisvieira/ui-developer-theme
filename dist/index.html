@@ -12,12 +12,12 @@
 <header class="header">
     <div class="container">
         <div class="row">
-            <div class="col-large-3 col-medium-3 col-small-3">
+            <div class="col-large-3 col-medium-3 col-small-12">
                 <div class="header__brand">
                     <img src="http://via.placeholder.com/176x70" alt="Logo" title="Logo" class="header__brandImage">
                 </div>
             </div>
-            <div class="col-large-9 col-medium-9 col-small-9">
+            <div class="col-large-9 col-medium-9 col-small-12">
 <nav class="navigation navigation--right">
     <a href="/" class="navigation__link" title="Home">Home</a>
     <a href="/" class="navigation__link" title="About">About</a>
@@ -30,11 +30,11 @@
 </header>
     <section class="hero">
         <div class="search">
-<form class="form form__field" action="">
-    <label class="form__fieldLabel hidde" for="search-field">Search</label>
-    <input class="form__fieldInput form__fieldInput--large" type="text" name="" placeholder="Search what you want..." id="search-field" />
-    <button class="button button--large button--search">Search</button>
-</form>
+            <form class="form form__field" action="">
+                <label class="form__fieldLabel hidde" for="search-field">Search</label>
+                <input class="form__fieldInput form__fieldInput--large" type="text" name="" placeholder="Search what you want..." id="search-field" />
+                <button class="button button--large button--search">Search</button>
+            </form>
         </div>
         <img src="http://via.placeholder.com/1900x340" alt="Hero Banner" title="Hero Banner" class="hero__image">
     </section>
@@ -228,6 +228,25 @@
                 <div class="col-large-12 col-medium-12 col-small-12">
                     <h1 class="typography--xlg typography--headline">Modal / Login form</h1>
                 </div>
+                <div class="col-large-6 off-large-3 col-medium-8 off-medium-2 col-small-12">
+<div class="card">
+    <div class="card__title">
+        <h2 class="card__titleText">Talk to me</h2>
+    </div>
+    <div class="card__content">
+        <form class="form form--vertical form__field" action="">
+            <label class="form__fieldLabel" for="fieldName">Name <span class="form__fieldLabel-required">*</span></label>
+            <input class="form__fieldInput form__fieldInput--large" type="text" name="" placeholder="Fill with your name" id="fieldName" />
+            <label class="form__fieldLabel" for="fieldPhone">Phone</label>
+            <input class="form__fieldInput form__fieldInput--large" type="text" name="" placeholder="Fill with your phone" id="fieldPhone" />
+            <label class="form__fieldLabel" for="fieldMessage">Message <span class="form__fieldLabel-required">*</span></label>
+            <textarea class="form__fieldInput form__fieldInput-textarea" rows="5" placeholder="Write something..."></textarea>
+            <button class="button button--large button--base">Send</button>
+            <button class="button button--large button--link">Reset</button>
+        </form>
+    </div>
+</div>
+                </div>
             </div>
         </div>
     </section>
@@ -244,9 +263,6 @@
     <button class="pagination__item">1</button>
     <button class="pagination__item pagination__item--active">2</button>
     <button class="pagination__item">3</button>
-    <button class="pagination__item">4</button>
-    <button class="pagination__item">5</button>
-    <button class="pagination__item">6</button>
     <button class="pagination__item pagination__item--dots">...</button>
     <button class="pagination__item">16</button>
     <button class="pagination__item pagination__item--next">❯</button>

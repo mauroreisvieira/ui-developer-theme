@@ -44,8 +44,9 @@
     .message__itemContent {
       flex-basis: 100%;
       padding: 14px;
-      background-color: #f6f6fa;
+      background-color: $gray-100;
       border-radius: 12px;
+      margin: 16px 0;
 
       .message__itemContent-text {
         @include typography($font-md, $font-thin);
@@ -55,6 +56,10 @@
           color: $pink;
         }
       }
+    }
+
+    @include mobile() {
+      flex-direction: column !important;
     }
   }
 }
