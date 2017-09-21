@@ -90,7 +90,7 @@
 .step__label {
   @include typography($font-xs, $font-normal);
   left: 50%;
-  margin-top: 60px;
+  top: 60px;
   position: absolute;
   text-transform: uppercase;
   transform: translateX(-50%);
