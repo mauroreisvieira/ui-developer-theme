@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     fs = require('fs'),
     browserSync = require('browser-sync').create();
 
-const DIST_FOLDER = './dist';
+const DOCS_FOLDER = './docs';
 const SRC_FOLDER = './src';
 
 gulp.task("build:scss",function(){
@@ -18,7 +18,7 @@ gulp.task("build:scss",function(){
       .pipe(autoprefixer({
         browsers: ['last 2 versions']
       }))
-      .pipe(gulp.dest(DIST_FOLDER));
+      .pipe(gulp.dest(DOCS_FOLDER));
 });
 
 gulp.task("build:html",function(){
@@ -27,17 +27,17 @@ gulp.task("build:html",function(){
 
     return gulp.src("./src/**/*.html")
         .pipe(mustache(templData, {extension: '.html'}))
-        .pipe(gulp.dest("./dist"));
+        .pipe(gulp.dest("./docs"));
 });
 
 gulp.task('serve', ['build:scss', 'build:html'], function() {
     browserSync.init({
       server: {
-        baseDir: DIST_FOLDER,
+        baseDir: DOCS_FOLDER,
         index: 'index.html'
       }
     });
     gulp.watch('src/*.scss', ['build:scss']);
     gulp.watch('src/*.html', ['build:html']);
-    gulp.watch([DIST_FOLDER + '/*.html',DIST_FOLDER + '/*.css']).on('change', browserSync.reload);
+    gulp.watch([DOCS_FOLDER + '/*.html',DOCS_FOLDER + '/*.css']).on('change', browserSync.reload);
 });
