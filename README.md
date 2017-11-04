@@ -1,4 +1,4 @@
-# UI Developer Test
+# UI Developer Theme
 
 Environment for building a small HTML and CSS page with a modular approach, using [SMACSS](https://smacss.com/) and [BEM](http://getbem.com/introduction/) as preferred methodologies.
 
